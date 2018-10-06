@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<!-- 不存在则忽略，显示hello null!(可以通过默认值进行设置)-->
+
+<table>
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>名称</th>
+            <th>创建时间</th>
+            <th>修改时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p: ${arealist}">
+            <td th:text="${p.areaId}"></td>
+            <td th:text="${p.areaName}"></td>
+            <td th:text="${p.createTime}"></td>
+            <td th:text="${p.lastEditTime}"></td>
+        </tr>
+        </tbody>
+    </table>
+</table>
+</body>
+</html>

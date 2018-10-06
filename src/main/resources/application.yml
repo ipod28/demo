@@ -1,0 +1,24 @@
+server:
+  port: 8008
+
+#dataSource
+jdbc:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8
+  username: root
+  password: root
+
+#Mybatis
+mybatis_ConfigFilePath: mybatis-config.xml
+mapper_path: /mapper/**.xml
+entity_package: com.anvvv.demo.entity
+#thymeleaf
+spring:
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+    mode: HTML
+    encoding: utf-8
+    cache: false
+#webservice
+address: http://127.0.0.1:7777/hn
